@@ -8,15 +8,24 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.eveningExerciseAnswers = {
   indexOf : function(arr, item) {
-
+    return arr.indexOf(item)
   },
 
   sum : function(arr) {
-
+    var sum = 0
+    for (var i = 0; i < arr.length; i++){
+      sum += arr[i]
+    };
+    return sum
   },
 
   remove : function(arr, item) {
-
+    for (var i = 0; i < arr.length; i++){
+      if (arr[i] == item) {
+        arr.splice(i, 1)
+      };
+    };
+    return arr
   },
 
   reverseString : function(str) {
